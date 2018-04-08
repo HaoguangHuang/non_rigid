@@ -9,8 +9,8 @@ function [warpedPointcloud, nodeGraph, DoF_node_relation_map]= process_first_fra
     radius_coff = para_set.radius_coff;
     pc1 = pcdenoise(pc1); pc2 = pcdenoise(pc2); 
 %     roi = [-230,inf;-inf,inf;0,980]; %197-198
-    roi = [-350,200,-250,100,700,900]; %frame 1 
-%     roi = [-inf,inf;-inf,inf;-inf,inf]; %frame 122
+%     roi = [-350,200,-250,100,700,900]; %frame 1 
+    roi = [-inf,inf;-inf,inf;-inf,inf]; %frame 122
 
     if debug_mode, figure(101),pcshow(pc1),title(sprintf('%d, before ROI filter',frame_no));  xlabel('x'),ylabel('y'),zlabel('z');end
     pc1 = select(pc1,findPointsInROI(pc1,roi)); % place wajueji in ROI

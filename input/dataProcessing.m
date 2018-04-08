@@ -20,8 +20,8 @@
 
 %------UCB dataset
 function dataProcessing
-    inputFile = '/home/hhg/Downloads/dataSet/RGBD/3D_Object_Reconstruction/RGBD object/UCB/detergent/detergent';
-    outputFile = './input/detergent/data';
+    inputFile = '/home/hhg/Downloads/dataSet/RGBD/3D_Object_Reconstruction/RGBD object/UCB/windex/zilla';
+    outputFile = './input/zilla/data';
     
     H_NP1_from_NP5 = h5read(sprintf('%s/calibration.h5',inputFile),'/H_NP1_from_NP5');
     H_NP1_ir_from_NP5 = h5read(sprintf('%s/calibration.h5',inputFile),'/H_NP1_ir_from_NP5');
