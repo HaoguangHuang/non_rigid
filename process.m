@@ -19,7 +19,8 @@ function [warpedPointcloud, nodeGraph]= process(pc1, pc2, para_set, nodeGraph, f
     % use nodeGraph to transform nodes from 'frame_no-2' coo into 'frame_no-1' coo
 %     node_set_updated = update_node(nodeGraph, cnt);
     tic;
-    node_set_updated = update_node_mean_window(nodeGraph, cnt, windowSize, frame_no);
+    node_set_updated = update_node(nodeGraph, cnt);
+%     node_set_updated = update_node_mean_window(nodeGraph, cnt, windowSize, frame_no);
     fprintf('update_node_mean_window time = %d\n',toc);
 
     for L = 1:layers
